@@ -1,0 +1,74 @@
+@import 'lenis/dist/lenis.css';
+@import './clone.css';
+@import './clone-all.css';
+
+:root {
+  --palette-primary: #031C14;
+  --palette-secondary: #DDEFDE;
+  --palette-accent: #D4AF37;
+  --palette-background: #779E91;
+  --palette-surface: #DDEFDE;
+  --palette-text: #DDEFDE;
+  --color-dark-green: var(--palette-primary);
+  --color-cream: var(--palette-secondary);
+  --color-bronze-orange: var(--palette-accent);
+  --color-slaye: var(--palette-background);
+  --color-red: #E6070A;
+  --color-body-background: var(--palette-primary);
+  --color-body-text: var(--palette-text);
+  --color-primary: var(--palette-primary);
+  --color-secondary: var(--palette-secondary);
+  --color-accent: var(--palette-accent);
+  --color-tertiary: var(--palette-background);
+  --color-error: var(--color-red);
+  --color-cream-transparent-20: color-mix(in srgb, var(--palette-secondary) 20%, transparent);
+  --color-cream-transparent-50: color-mix(in srgb, var(--palette-secondary) 50%, transparent);
+  --color-cream-transparent-80: color-mix(in srgb, var(--palette-secondary) 80%, transparent);
+  --color-dark-green-transparent-20: color-mix(in srgb, var(--palette-primary) 20%, transparent);
+  --color-dark-green-transparent-50: color-mix(in srgb, var(--palette-primary) 50%, transparent);
+  --color-dark-green-transparent-80: color-mix(in srgb, var(--palette-primary) 80%, transparent);
+  --color-secondary-transparent-20: color-mix(in srgb, var(--palette-secondary) 20%, transparent);
+  --color-secondary-transparent-50: color-mix(in srgb, var(--palette-secondary) 50%, transparent);
+  --color-secondary-transparent-80: color-mix(in srgb, var(--palette-secondary) 80%, transparent);
+  --color-primary-transparent-20: color-mix(in srgb, var(--palette-primary) 20%, transparent);
+  --color-primary-transparent-50: color-mix(in srgb, var(--palette-primary) 50%, transparent);
+  --color-primary-transparent-80: color-mix(in srgb, var(--palette-primary) 80%, transparent);
+}
+
+html,
+.error__body,
+.u-bg-primary,
+.service-list-item,
+.footer__copy,
+.button--type-secondary,
+.icon-button--type-secondary,
+.carousel-autoplay__button,
+.open-service-modal__close,
+.lava-cc__inner,
+.doctor-profile__initials {
+  color: var(--palette-text);
+}
+
+.doctor-profile__portrait-note {
+  color: color-mix(in srgb, var(--palette-text) 70%, transparent);
+}
+
+@media screen and (width >= 840px) {
+  .header-navigation__link,
+  .header-navigation__link:hover,
+  .site-navigation__list-item--active .header-navigation__link {
+    color: var(--palette-text);
+  }
+}
+
+.u-bg-secondary,
+#contacts,
+.contacts {
+  background-color: var(--palette-surface);
+  color: var(--palette-primary);
+}
+
+.wheel-block-wheel__svg {
+  animation-range-start: cover;
+  animation-range-end: contain;
+}

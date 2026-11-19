@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="627" viewBox="0 0 740 627">
+  <title>Map showing Shrivastava Dental Clinic in Wadala Naka, Nashik</title>
+  <defs>
+    <clipPath id="pinClip">
+      <circle cx="370" cy="286" r="28"/>
+    </clipPath>
+    <pattern id="mapDots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#031C14" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <path fill="#DDEFDE" d="M0 0h740v627H0z"/>
+  <path fill="url(#mapDots)" d="M0 0h740v627H0z"/>
+  <g fill="#031C14" opacity="0.05">
+    <rect x="62" y="64" width="148" height="96" rx="14" transform="rotate(-7 136 112)"/>
+    <rect x="242" y="48" width="126" height="112" rx="16" transform="rotate(5 305 104)"/>
+    <rect x="430" y="62" width="170" height="88" rx="14" transform="rotate(-4 515 106)"/>
+    <rect x="44" y="222" width="116" height="122" rx="16" transform="rotate(8 102 283)"/>
+    <rect x="456" y="246" width="150" height="108" rx="16" transform="rotate(6 531 300)"/>
+    <rect x="198" y="486" width="152" height="96" rx="14" transform="rotate(-6 274 534)"/>
+    <rect x="500" y="474" width="154" height="110" rx="16" transform="rotate(7 577 529)"/>
+  </g>
+  <g fill="none" stroke="#031C14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-30 302H770" stroke-width="7"/>
+    <path d="M-20 452C145 428 245 470 390 438S620 400 770 430" stroke-width="5"/>
+    <path d="M90 -20C120 130 78 240 128 640" stroke-width="5"/>
+    <path d="M548 -20C520 130 575 235 535 640" stroke-width="5"/>
+    <path d="M-30 145L260 176L420 126L770 158" stroke-width="4"/>
+    <path d="M-30 540L240 510L440 552L770 525" stroke-width="4"/>
+    <path d="M180 300C242 276 304 302 370 286C448 264 500 244 562 224" stroke="#D4AF37" stroke-width="5"/>
+    <path d="M42 20L90 302L44 607" stroke-width="2" opacity="0.45"/>
+    <path d="M224 18L250 302L218 609" stroke-width="2" opacity="0.45"/>
+    <path d="M420 16L390 302L430 611" stroke-width="2" opacity="0.45"/>
+    <path d="M646 14L600 302L660 610" stroke-width="2" opacity="0.45"/>
+    <path d="M0 76C180 96 330 62 470 92S640 84 740 106" stroke-width="2" opacity="0.45"/>
+    <path d="M0 356C170 330 300 380 450 350S620 320 740 346" stroke-width="2" opacity="0.45"/>
+    <path d="M0 584C160 560 320 602 470 574S620 558 740 580" stroke-width="2" opacity="0.45"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#031C14">
+    <text x="58" y="86" font-size="18" font-weight="700" letter-spacing="3">NASHIK</text>
+    <text x="58" y="110" font-size="11" letter-spacing="2" opacity="0.65">MAHARASHTRA • 422001</text>
+    <g transform="translate(154 216)">
+      <rect width="132" height="30" rx="15" fill="#031C14"/>
+      <text x="66" y="20" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1.5" fill="#DDEFDE">WADALA NAKA</text>
+    </g>
+    <circle cx="512" cy="215" r="5" fill="#D4AF37"/>
+    <text x="526" y="219" font-size="12" font-weight="700" letter-spacing="1.4">HOTEL SAFFRON</text>
+    <text x="526" y="237" font-size="11" opacity="0.65">nearby landmark</text>
+    <text x="92" y="330" font-size="11" letter-spacing="1.5" opacity="0.65">EXPRESS TOWER ROAD</text>
+    <text x="402" y="330" font-size="11" letter-spacing="1.5" opacity="0.65">NASHIK ROAD</text>
+  </g>
+  <circle cx="370" cy="286" r="43" fill="#031C14" opacity="0.12"/>
+  <circle cx="370" cy="286" r="38" fill="#DDEFDE" stroke="#031C14" stroke-width="7"/>
+  <circle cx="370" cy="286" r="29" fill="#031C14"/>
+  <circle cx="370" cy="286" r="24" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <image href="data:image/png;base64,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" x="352" y="268" width="36" height="36" preserveAspectRatio="xMidYMid meet" clip-path="url(#pinClip)"/>
+  <path d="M370 324V380" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6 8"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="92" y="382" width="556" height="166" rx="22" fill="#031C14"/>
+    <rect x="92" y="382" width="8" height="166" rx="4" fill="#D4AF37"/>
+    <text x="130" y="424" font-size="22" font-weight="700" letter-spacing="1.2" fill="#DDEFDE">SHRIVASTAVA DENTAL CLINIC</text>
+    <text x="130" y="458" font-size="15" fill="#DDEFDE" opacity="0.9">Shop No. Express Tower, Wadala Naka,</text>
+    <text x="130" y="484" font-size="15" fill="#DDEFDE" opacity="0.9">near Hotel Saffron, Nashik - 422001</text>
+    <path d="M130 508H610" stroke="#DDEFDE" stroke-width="1" opacity="0.2"/>
+    <text x="130" y="532" font-size="12" letter-spacing="2" fill="#D4AF37">WADALA NAKA • NASHIK</text>
+  </g>
+</svg>
