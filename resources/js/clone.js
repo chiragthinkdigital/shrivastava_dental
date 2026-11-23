@@ -216,10 +216,10 @@ import Lenis from 'lenis';
       LANG === 'en'
         ? 'We use cookies to ensure the website works properly and to analyse traffic. Choose which cookies you allow.'
         : LANG === 'ru'
-          ? 'Мы используем файлы cookie для корректной работы сайта и анализа трафика. Выберите, какие cookie разрешить.'
+          ? 'ÐœÑ‹ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÐ¼ Ñ„Ð°Ð¹Ð»Ñ‹ cookie Ð´Ð»Ñ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ð¹ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ ÑÐ°Ð¹Ñ‚Ð° Ð¸ Ð°Ð½Ð°Ð»Ð¸Ð·Ð° Ñ‚Ñ€Ð°Ñ„Ð¸ÐºÐ°. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ, ÐºÐ°ÐºÐ¸Ðµ cookie Ñ€Ð°Ð·Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ.'
           : 'We use cookies to ensure the website works properly and to improve your experience.';
-    var accept = LANG === 'en' ? 'Accept all' : LANG === 'ru' ? 'Принять все' : 'Accept All';
-    var necessary = LANG === 'en' ? 'Necessary only' : LANG === 'ru' ? 'Только необходимые' : 'Necessary Only';
+    var accept = LANG === 'en' ? 'Accept all' : LANG === 'ru' ? 'ÐŸÑ€Ð¸Ð½ÑÑ‚ÑŒ Ð²ÑÐµ' : 'Accept All';
+    var necessary = LANG === 'en' ? 'Necessary only' : LANG === 'ru' ? 'Ð¢Ð¾Ð»ÑŒÐºÐ¾ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ñ‹Ðµ' : 'Necessary Only';
     el.innerHTML =
       '<div class="lava-cc__inner"><p class="lava-cc__text">' +
       text +
@@ -272,7 +272,7 @@ import Lenis from 'lenis';
             (LANG === 'en'
               ? 'Thank you! Your application has been received.'
               : LANG === 'ru'
-                ? 'Спасибо! Ваша заявка получена.'
+                ? 'Ð¡Ð¿Ð°ÑÐ¸Ð±Ð¾! Ð’Ð°ÑˆÐ° Ð·Ð°ÑÐ²ÐºÐ° Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð°.'
                 : 'Thank you! Your appointment request has been received.') +
             '</p>';
         }
@@ -416,7 +416,7 @@ import Lenis from 'lenis';
   function initCompareSliders() {
     var HANDLE_SIZE = 40;
     var LINE_WIDTH = 2;
-    var LINE_COLOR = '#031C14';
+    var LINE_COLOR = '#1A1A1A';
 
     document.querySelectorAll('.vci--container').forEach(function (root) {
       if (root.getAttribute('data-vci-ready') === '1') return;

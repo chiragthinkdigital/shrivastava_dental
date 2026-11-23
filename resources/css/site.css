@@ -3,15 +3,17 @@
 @import './clone-all.css';
 
 :root {
-  --palette-primary: #031C14;
+  --palette-primary: #1A1A1A;
   --palette-secondary: #DDEFDE;
   --palette-accent: #D4AF37;
+  --palette-wine: #880235;
   --palette-background: #779E91;
-  --palette-surface: #DDEFDE;
+  --palette-surface: #FFFFFF;
   --palette-text: #DDEFDE;
   --color-dark-green: var(--palette-primary);
   --color-cream: var(--palette-secondary);
   --color-bronze-orange: var(--palette-accent);
+  --color-wine: var(--palette-wine);
   --color-slaye: var(--palette-background);
   --color-red: #E6070A;
   --color-body-background: var(--palette-primary);
@@ -33,6 +35,8 @@
   --color-primary-transparent-20: color-mix(in srgb, var(--palette-primary) 20%, transparent);
   --color-primary-transparent-50: color-mix(in srgb, var(--palette-primary) 50%, transparent);
   --color-primary-transparent-80: color-mix(in srgb, var(--palette-primary) 80%, transparent);
+  --color-wine-transparent-20: color-mix(in srgb, var(--palette-wine) 20%, transparent);
+  --color-wine-transparent-50: color-mix(in srgb, var(--palette-wine) 50%, transparent);
 }
 
 html,
@@ -71,4 +75,67 @@ html,
 .wheel-block-wheel__svg {
   animation-range-start: cover;
   animation-range-end: contain;
+}
+
+.u-text-wine {
+  color: var(--palette-wine);
+}
+
+.u-text-gold {
+  color: var(--palette-accent);
+}
+
+.u-text-white {
+  color: var(--palette-surface);
+}
+
+.button--type-primary:hover,
+.button--type-primary:focus-visible {
+  --button-background-color: var(--palette-wine);
+  border-color: var(--palette-accent);
+  color: var(--palette-text);
+}
+
+.doctor-profile__actions .button--type-primary {
+  --button-background-color: var(--palette-wine);
+  border-color: var(--palette-accent);
+  color: var(--palette-text);
+}
+
+.lava-cc button {
+  border-color: var(--palette-accent);
+  color: var(--palette-wine);
+}
+
+.lava-cc button.is-primary {
+  background: var(--palette-wine);
+  border-color: var(--palette-accent);
+  color: var(--palette-text);
+}
+
+.progress__fill {
+  background-color: var(--palette-wine);
+}
+
+.details[open] > .details__header .details__marker {
+  color: var(--palette-wine);
+}
+
+.footer-contact-link {
+  border-bottom-color: var(--palette-wine);
+}
+
+.wheel-step__bubble {
+  fill: var(--palette-wine);
+  stroke: var(--palette-wine);
+}
+
+.wheel-step--active .wheel-step__bubble {
+  fill: var(--palette-wine);
+  stroke: var(--palette-wine);
+}
+
+.wheel-step__text,
+.wheel-step--active .wheel-step__text {
+  fill: var(--color-accent);
 }

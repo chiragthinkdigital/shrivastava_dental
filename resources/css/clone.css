@@ -13,7 +13,7 @@ html.js-ready .reveal-block {
   z-index: 200;
   overflow-y: auto;
   background: var(--color-tertiary, #DDEFDE);
-  color: var(--color-primary, #031C14);
+  color: var(--color-primary, #1A1A1A);
   scrollbar-gutter: stable;
   overscroll-behavior: contain;
 }
@@ -44,7 +44,7 @@ html.js-ready .reveal-block {
   border-radius: 999px;
   cursor: pointer;
   border: none;
-  background: var(--color-primary, #031C14);
+  background: var(--color-primary, #1A1A1A);
   color: var(--color-secondary, #DDEFDE);
   display: grid;
   place-items: center;
@@ -133,7 +133,7 @@ html.js-ready .reveal-block {
   overflow: hidden;
   touch-action: pan-y;
   cursor: ew-resize;
-  background: var(--color-primary, #031C14);
+  background: var(--color-primary, #1A1A1A);
 }
 .vci--container img {
   position: absolute;
@@ -167,7 +167,7 @@ html.js-ready .reveal-block {
 .vci--slider-line {
   width: 2px;
   height: calc(50% - 30px);
-  background: var(--color-primary, #031C14);
+  background: var(--color-primary, #1A1A1A);
   flex: 0 0 auto;
 }
 .vci--custom-handle {
@@ -198,7 +198,7 @@ html.js-ready .reveal-block {
 .lava-cc__inner {
   max-width: 720px;
   width: 100%;
-  background: var(--color-primary, #031C14);
+  background: var(--color-primary, #1A1A1A);
   color: var(--color-secondary, #DDEFDE);
   border: 1px solid var(--color-secondary-transparent-20);
   border-radius: 16px;
@@ -229,7 +229,7 @@ html.js-ready .reveal-block {
 }
 .lava-cc button.is-primary {
   background: #D4AF37;
-  color: #031C14;
+  color: #1A1A1A;
 }
 
 /* Vacancy modal form (rebuilt) */
@@ -357,7 +357,7 @@ html.js-ready .reveal-block {
   align-items: center;
   gap: 0.75rem;
   margin-bottom: var(--space-size-s);
-  color: var(--color-primary-transparent-50, #031C1480);
+  color: var(--color-primary-transparent-50, #1A1A1A80);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -387,7 +387,7 @@ html.js-ready .reveal-block {
   aspect-ratio: 4 / 5;
   max-width: 34rem;
   overflow: hidden;
-  background-color: var(--color-primary, #031C14);
+  background-color: var(--color-primary, #1A1A1A);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.18);
 }
 
@@ -429,13 +429,13 @@ html.js-ready .reveal-block {
 
 .doctor-profile__role {
   margin: 0;
-  color: var(--color-accent, #031C14);
+  color: var(--color-accent, #1A1A1A);
   font-weight: 500;
 }
 
 .doctor-profile__reg {
   margin-top: 0.5rem;
-  color: var(--color-primary-transparent-50, #031C1480);
+  color: var(--color-primary-transparent-50, #1A1A1A80);
 }
 
 .doctor-profile__body {
@@ -456,7 +456,7 @@ html.js-ready .reveal-block {
 
 .doctor-profile__chip {
   padding: 0.55rem 0.9rem;
-  border: 1px solid var(--color-primary-transparent-50, #031C1480);
+  border: 1px solid var(--color-primary-transparent-50, #1A1A1A80);
   border-radius: 2px;
 }
 
@@ -475,7 +475,7 @@ html.js-ready .reveal-block {
 
 .doctor-profile__link {
   position: relative;
-  color: var(--color-primary, #031C14);
+  color: var(--color-primary, #1A1A1A);
   text-decoration: none;
 }
 
