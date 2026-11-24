@@ -7,7 +7,7 @@ import Lenis from 'lenis';
   document.documentElement.classList.add('js-ready');
 
   var body = document.body;
-  var LANG = body.getAttribute('data-clone-lang') || 'lv';
+  var LANG = body.getAttribute('data-clone-lang') || 'en';
   var PAGE = body.getAttribute('data-clone-page') || 'index';
   var lenis = new Lenis({ autoRaf: true });
   var serviceModalLenis = null;
@@ -22,16 +22,21 @@ import Lenis from 'lenis';
   function initMobileMenu() {
     var toggle = document.querySelector('.menu-toggle-button');
     var nav = document.querySelector('.site-navigation');
-    if (!toggle || !nav) return;
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('is-open');
+    var header = document.querySelector('.header');
+    if (!toggle || !nav || !header) return;
+    function setMenu(open) {
+      header.classList.toggle('header--navigation-open', open);
+      toggle.classList.toggle('menu-toggle-button--active', open);
       body.classList.toggle('menu-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    setMenu(false);
+    toggle.addEventListener('click', function () {
+      setMenu(!header.classList.contains('header--navigation-open'));
     });
     nav.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
-        nav.classList.remove('is-open');
-        body.classList.remove('menu-open');
+        setMenu(false);
       });
     });
   }
@@ -168,12 +173,23 @@ import Lenis from 'lenis';
         var preview = scope ? scope.querySelector('video.video-dialog__preview') : null;
         var full = dlg.querySelector('video.video-dialog__full');
         if (full) {
-          var teaser = preview ? (preview.getAttribute('src') || '') : '';
-          var derive = teaser && fullCandidate(teaser) !== teaser ? fullCandidate(teaser) : teaser;
+          var teaser = '';
+          if (preview) {
+            teaser = preview.getAttribute('src') || '';
+            if (!teaser) {
+              var srcEl = preview.querySelector('source[src]');
+              teaser = srcEl ? (srcEl.getAttribute('src') || '') : '';
+            }
+          }
+          var derive = teaser;
+          if (teaser) {
+            var webmCandidate = teaser.replace(/-(tease|preview)\.(webm|mp4)$/i, '.webm');
+            if (webmCandidate !== teaser) derive = webmCandidate;
+          }
           if (derive && full.getAttribute('src') !== derive) {
             full.addEventListener('error', function onErr() {
               full.removeEventListener('error', onErr);
-              if (teaser) full.src = teaser;
+              if (teaser && full.getAttribute('src') !== teaser) full.src = teaser;
             });
             full.src = derive;
           }
@@ -583,7 +599,7 @@ import Lenis from 'lenis';
   }
 
   function renderServiceList() {
-    var lang = document.body.getAttribute('data-clone-lang') || 'lv';
+    var lang = 'en';
     var data = window.LAVA_SERVICES && window.LAVA_SERVICES.services && window.LAVA_SERVICES.services[lang];
     if (!data || !data.length) return;
     var cardGrid = document.querySelector('.services-card-grid');
@@ -651,7 +667,7 @@ import Lenis from 'lenis';
   }
 
   function openServiceModal(trigger) {
-    var lang = document.body.getAttribute('data-clone-lang') || 'en';
+    var lang = 'en';
     var data = window.LAVA_SERVICES && window.LAVA_SERVICES.services && window.LAVA_SERVICES.services[lang];
     if (!data) return;
     var entry = null;
@@ -681,10 +697,10 @@ import Lenis from 'lenis';
 
     var media = overlay.querySelector('.open-service__media');
     var mediaHtml = '';
-    if (entry.media && entry.media.video) {
-      mediaHtml += '<video class="open-service__video" src="' + entry.media.video + '" autoplay muted loop playsinline preload="metadata"></video>';
-    }
-    if (entry.media && Array.isArray(entry.media.vcis) && entry.media.vcis.length) {
+    var hasVideo = !!(entry.media && entry.media.video);
+    if (hasVideo) {
+      mediaHtml += '<video class="open-service__video" src="' + entry.media.video + '" autoplay muted loop playsinline controls preload="metadata"></video>';
+    } else if (entry.media && Array.isArray(entry.media.vcis) && entry.media.vcis.length) {
       entry.media.vcis.forEach(function (pair) {
         var srcA = pair[0]; /* after (pec) */
         var srcB = pair[1]; /* before (pirms) */
@@ -709,7 +725,7 @@ import Lenis from 'lenis';
     var actionHtml = '';
     actionHtml += '<a class="button button--type-secondary button--icon-end" href="' + entry.bookingUrl + '" target="_blank" rel="noopener"><div class="button__text u-text-body-button">' + entry.cta.apply + '</div></a>';
     if (entry.page) {
-      var pagePath = lang === 'lv' ? '/' + entry.page : '/' + lang + '/' + entry.page;
+      var pagePath = '/' + entry.page;
       actionHtml += '<a class="button button--type-outline button--icon-end" href="' + pagePath + '"><div class="button__text u-text-body-button">' + entry.cta.learn + '</div></a>';
     }
     actions.innerHTML = actionHtml;

@@ -9,10 +9,6 @@
 <link rel="icon" type="image/png" href="/favicon.png?v=2">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
 <link id="i18n-can" rel="canonical" href="/">
-<link id="i18n-alternate-lv-LV" rel="alternate" href="/" hreflang="en-IN">
-<link id="i18n-alternate-en" rel="alternate" href="/en" hreflang="en">
-<link id="i18n-alternate-ru" rel="alternate" href="/ru" hreflang="ru">
-<link id="i18n-xd" rel="alternate" href="/" hreflang="x-default">
 <meta id="i18n-og" property="og:locale" content="lv_LV">
 <meta id="i18n-og-url" property="og:url" content="https://shrivastava-dental.com">
 <meta id="i18n-og-alt-en_US" property="og:locale:alternate" content="en_US">

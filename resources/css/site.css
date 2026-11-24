@@ -65,6 +65,25 @@ html,
   }
 }
 
+@media screen and (width <= 839px) {
+  .header--navigation-open {
+    color: var(--palette-secondary);
+  }
+
+  .header--navigation-open .header-grid__item--main {
+    background-color: var(--palette-primary);
+  }
+
+  .header--navigation-open .header-navigation__link {
+    color: var(--color-secondary-transparent-80);
+  }
+
+  .header--navigation-open .header-navigation__link:hover,
+  .header--navigation-open .site-navigation__list-item--active .header-navigation__link {
+    color: var(--palette-secondary);
+  }
+}
+
 .u-bg-secondary,
 #contacts,
 .contacts {
