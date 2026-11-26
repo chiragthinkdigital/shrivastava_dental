@@ -104,6 +104,80 @@ html,
   color: var(--palette-accent);
 }
 
+.video-dialog__full--portrait {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 90svh;
+  aspect-ratio: 9 / 16;
+}
+
+dialog:has(.video-dialog__full--portrait) {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.team-info-panels {
+  align-content: start;
+}
+
+.team-info-panel {
+  display: none;
+}
+
+.team-info-panel--active {
+  display: block;
+  animation: team-info-panel-enter 350ms ease-out both;
+}
+
+@keyframes team-info-panel-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-manifest .scroll-box .doctor-profile__content {
+  max-width: none;
+}
+
+.about-manifest .scroll-box .doctor-profile__name {
+  font-size: clamp(2rem, 3.6vw, 3.25rem);
+}
+
+.about-manifest .scroll-box .doctor-profile__body,
+.about-manifest .scroll-box .doctor-profile__facts,
+.about-manifest .scroll-box .doctor-profile__actions {
+  margin-top: var(--space-size-m);
+}
+
+.about-manifest .scroll-box .doctor-profile__role,
+.about-manifest .scroll-box .doctor-profile__link,
+.about-manifest .scroll-box .team-info-panel__note {
+  color: var(--palette-wine);
+}
+
+.about-manifest .scroll-box .doctor-profile__chip {
+  border-color: var(--palette-wine);
+}
+
+.about-manifest .scroll-box .team-info-panel__note {
+  margin: var(--space-size-s) 0 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-info-panel--active {
+    animation: none;
+  }
+}
+
 .u-text-white {
   color: var(--palette-surface);
 }

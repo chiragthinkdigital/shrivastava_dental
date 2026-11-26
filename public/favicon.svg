@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(256 256) scale(0.9 1.45) translate(-254.24 -238.87)">
 <path d="M0 365.742H47.5053L138.82 274.669L114.721 250.94L0 365.742Z" fill="#D4AF37"></path>
 <path d="M91.45 203.341H138.822L254.337 318.824L322.416 250.933L345.689 274.248L254.337 365.716L91.45 203.341Z" fill="#D4AF37"></path>
 <path d="M162.925 203.347L186.338 226.663L254.347 159.318L460.974 365.741H508.479L254.328 112L162.925 203.347Z" fill="#D4AF37"></path>
+</g>
 </svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
 @media (prefers-color-scheme: dark) { :root { filter: none; } }
 </style></svg>

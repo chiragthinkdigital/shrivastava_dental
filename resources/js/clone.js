@@ -1072,6 +1072,10 @@ import Lenis from 'lenis';
         var parsed = parseFloat(raw);
         if (!isNaN(parsed) && parsed > 0) duration = parsed;
       }
+      var infoBox = root.closest('.image-info-box');
+      var panels = infoBox
+        ? Array.prototype.slice.call(infoBox.querySelectorAll('.team-info-panel'))
+        : [];
       var index = 0;
       var timer = null;
 
@@ -1081,6 +1085,11 @@ import Lenis from 'lenis';
         });
         dots.forEach(function (d, i) {
           d.classList.toggle('carousel-autoplay__dot--active', i === index);
+        });
+        panels.forEach(function (panel, i) {
+          var active = i === index;
+          panel.classList.toggle('team-info-panel--active', active);
+          panel.setAttribute('aria-hidden', active ? 'false' : 'true');
         });
       }
 

@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="/_nuxt/entry.CnEWHl6T.css" crossorigin="">
 <link rel="stylesheet" href="/_nuxt/AppPage.B5LH5sK5.css" crossorigin="">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="shortcut icon" href="/favicon.ico?v=2">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=2">
-<link rel="icon" type="image/png" href="/favicon.png?v=2">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+<link rel="shortcut icon" href="/favicon.ico?v=4">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=4">
+<link rel="icon" type="image/png" href="/favicon.png?v=4">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
 <link id="i18n-can" rel="canonical" href="/">
 <meta id="i18n-og" property="og:locale" content="lv_LV">
 <meta id="i18n-og-url" property="og:url" content="https://shrivastava-dental.com">
