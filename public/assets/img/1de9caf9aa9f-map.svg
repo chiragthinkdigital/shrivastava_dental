@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="740" height="627" viewBox="0 0 740 627">
-  <title>Map showing Shrivastava Dental Clinic in Wadala Naka, Nashik</title>
+  <title>Illustrative map showing Shrivastava Dental Clinic in Wadala Naka, Renuka Nagar, Nashik</title>
   <defs>
     <clipPath id="pinClip">
       <circle cx="370" cy="286" r="28"/>
@@ -26,7 +26,7 @@
     <path d="M548 -20C520 130 575 235 535 640" stroke-width="5"/>
     <path d="M-30 145L260 176L420 126L770 158" stroke-width="4"/>
     <path d="M-30 540L240 510L440 552L770 525" stroke-width="4"/>
-    <path d="M180 300C242 276 304 302 370 286C448 264 500 244 562 224" stroke="#D4AF37" stroke-width="5"/>
+    <path d="M180 300C242 276 304 302 370 286C390 280 410 270 432 264" stroke="#D4AF37" stroke-width="5" opacity="0.7"/>
     <path d="M42 20L90 302L44 607" stroke-width="2" opacity="0.45"/>
     <path d="M224 18L250 302L218 609" stroke-width="2" opacity="0.45"/>
     <path d="M420 16L390 302L430 611" stroke-width="2" opacity="0.45"/>
@@ -37,16 +37,17 @@
   </g>
   <g font-family="Arial, Helvetica, sans-serif" fill="#1A1A1A">
     <text x="58" y="86" font-size="18" font-weight="700" letter-spacing="3">NASHIK</text>
-    <text x="58" y="110" font-size="11" letter-spacing="2" opacity="0.65">MAHARASHTRA â€¢ 422001</text>
+    <text x="58" y="110" font-size="11" letter-spacing="2" opacity="0.65">MAHARASHTRA • 422001</text>
     <g transform="translate(154 216)">
       <rect width="132" height="30" rx="15" fill="#1A1A1A"/>
       <text x="66" y="20" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1.5" fill="#DDEFDE">WADALA NAKA</text>
     </g>
-    <circle cx="512" cy="215" r="5" fill="#D4AF37"/>
-    <text x="526" y="219" font-size="12" font-weight="700" letter-spacing="1.4">HOTEL SAFFRON</text>
-    <text x="526" y="237" font-size="11" opacity="0.65">nearby landmark</text>
-    <text x="92" y="330" font-size="11" letter-spacing="1.5" opacity="0.65">EXPRESS TOWER ROAD</text>
-    <text x="402" y="330" font-size="11" letter-spacing="1.5" opacity="0.65">NASHIK ROAD</text>
+    <text x="154" y="266" font-size="11" font-weight="700" letter-spacing="1.6">RENUKA NAGAR</text>
+    <circle cx="432" cy="264" r="5" fill="#D4AF37"/>
+    <text x="446" y="268" font-size="12" font-weight="700" letter-spacing="1.4">HOTEL SAFFRON</text>
+    <text x="446" y="286" font-size="11" opacity="0.65">nearby landmark</text>
+    <text x="92" y="330" font-size="11" letter-spacing="1.5" opacity="0.65">EXPRESS TOWER</text>
+    <text x="402" y="330" font-size="11" letter-spacing="1.5" opacity="0.65">NASHIK</text>
   </g>
   <circle cx="370" cy="286" r="43" fill="#1A1A1A" opacity="0.12"/>
   <circle cx="370" cy="286" r="38" fill="#DDEFDE" stroke="#1A1A1A" stroke-width="7"/>
@@ -58,9 +59,9 @@
     <rect x="92" y="382" width="556" height="166" rx="22" fill="#1A1A1A"/>
     <rect x="92" y="382" width="8" height="166" rx="4" fill="#D4AF37"/>
     <text x="130" y="424" font-size="22" font-weight="700" letter-spacing="1.2" fill="#DDEFDE">SHRIVASTAVA DENTAL CLINIC</text>
-    <text x="130" y="458" font-size="15" fill="#DDEFDE" opacity="0.9">Shop No. Express Tower, Wadala Naka,</text>
-    <text x="130" y="484" font-size="15" fill="#DDEFDE" opacity="0.9">near Hotel Saffron, Nashik - 422001</text>
+    <text x="130" y="458" font-size="15" fill="#DDEFDE" opacity="0.9">Wadala Naka, Renuka Nagar, Nashik,</text>
+    <text x="130" y="484" font-size="15" fill="#DDEFDE" opacity="0.9">Maharashtra 422001</text>
     <path d="M130 508H610" stroke="#DDEFDE" stroke-width="1" opacity="0.2"/>
-    <text x="130" y="532" font-size="12" letter-spacing="2" fill="#D4AF37">WADALA NAKA â€¢ NASHIK</text>
+    <text x="130" y="532" font-size="12" letter-spacing="2" fill="#D4AF37">WADALA NAKA • NASHIK</text>
   </g>
 </svg>

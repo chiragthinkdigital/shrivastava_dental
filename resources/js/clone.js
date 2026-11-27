@@ -1076,12 +1076,20 @@ import Lenis from 'lenis';
       var panels = infoBox
         ? Array.prototype.slice.call(infoBox.querySelectorAll('.team-info-panel'))
         : [];
+      var isTeamCarousel = panels.length > 0;
       var index = 0;
       var timer = null;
 
       function render() {
         items.forEach(function (img, i) {
-          img.style.display = i === index ? '' : 'none';
+          if (isTeamCarousel) {
+            var imageActive = i === index;
+            img.style.display = '';
+            img.classList.toggle('image-carousel__image--active', imageActive);
+            img.setAttribute('aria-hidden', imageActive ? 'false' : 'true');
+          } else {
+            img.style.display = i === index ? '' : 'none';
+          }
         });
         dots.forEach(function (d, i) {
           d.classList.toggle('carousel-autoplay__dot--active', i === index);

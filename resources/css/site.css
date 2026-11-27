@@ -53,6 +53,26 @@ html,
   color: var(--palette-text);
 }
 
+.open-service-modal {
+  background-color: var(--palette-primary);
+  color: var(--palette-text);
+}
+
+.open-service-modal__close {
+  background-color: var(--palette-accent);
+  color: var(--palette-primary);
+}
+
+.open-service-modal .button--type-secondary {
+  --button-background-color: var(--palette-accent);
+  color: var(--palette-primary);
+}
+
+.open-service-modal .button--type-outline {
+  color: var(--palette-text);
+  border-color: var(--palette-text);
+}
+
 .doctor-profile__portrait-note {
   color: color-mix(in srgb, var(--palette-text) 70%, transparent);
 }
@@ -91,6 +111,22 @@ html,
   color: var(--palette-primary);
 }
 
+.map-link {
+  display: block;
+  text-decoration: none;
+}
+
+.map-link .image-info-box__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-link:focus-visible {
+  outline: 3px solid var(--palette-wine);
+  outline-offset: -3px;
+}
+
 .wheel-block-wheel__svg {
   animation-range-start: cover;
   animation-range-end: contain;
@@ -117,29 +153,44 @@ dialog:has(.video-dialog__full--portrait) {
   max-width: 100%;
 }
 
+#team {
+  --team-transition-duration: 460ms;
+  --team-transition-easing: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#team .image-carousel__image {
+  opacity: 0;
+  transform: scale(1.015);
+  transition: opacity 260ms var(--team-transition-easing), transform 260ms var(--team-transition-easing);
+  will-change: opacity, transform;
+}
+
+#team .image-carousel__image--active {
+  opacity: 1;
+  transform: scale(1);
+  transition-duration: var(--team-transition-duration);
+}
+
 .team-info-panels {
+  display: grid;
   align-content: start;
 }
 
 .team-info-panel {
-  display: none;
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 260ms var(--team-transition-easing), transform 260ms var(--team-transition-easing), visibility 0s linear 260ms;
+  pointer-events: none;
 }
 
 .team-info-panel--active {
-  display: block;
-  animation: team-info-panel-enter 350ms ease-out both;
-}
-
-@keyframes team-info-panel-enter {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity var(--team-transition-duration) var(--team-transition-easing), transform var(--team-transition-duration) var(--team-transition-easing), visibility 0s;
+  pointer-events: auto;
 }
 
 .about-manifest .scroll-box .doctor-profile__content {
@@ -172,9 +223,18 @@ dialog:has(.video-dialog__full--portrait) {
   text-transform: uppercase;
 }
 
+@media screen and (width >= 720px) {
+  .about-manifest .image-info-box__item--aside {
+    align-self: center;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  #team .image-carousel__image,
+  #team .image-carousel__image--active,
+  .team-info-panel,
   .team-info-panel--active {
-    animation: none;
+    transition: none;
   }
 }
 
@@ -231,4 +291,61 @@ dialog:has(.video-dialog__full--portrait) {
 .wheel-step__text,
 .wheel-step--active .wheel-step__text {
   fill: var(--color-accent);
+}
+
+.feedback-instagram {
+  padding: var(--space-size-4xl) 0;
+  overflow: clip;
+}
+
+.feedback-instagram__header {
+  display: grid;
+  gap: var(--space-size-s);
+  max-width: 52rem;
+}
+
+.feedback-instagram__note {
+  color: var(--color-cream-transparent-80);
+  max-width: 38rem;
+}
+
+.feedback-instagram__body {
+  padding-top: var(--space-size-2xl-3xl);
+}
+
+.feedback-instagram-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-size-s-m);
+}
+
+@media screen and (width >= 480px) {
+  .feedback-instagram-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.feedback-instagram-list__item {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  align-self: stretch;
+  max-width: 100%;
+  overflow: clip;
+  border: 1px solid var(--color-cream-transparent-20);
+  border-radius: var(--space-size-2xs);
+  background-color: var(--palette-wine);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--palette-primary) 30%, transparent);
+}
+
+.feedback-instagram-list__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (width < 720px) {
+  .overlay-section--about-experience {
+    display: none;
+  }
 }

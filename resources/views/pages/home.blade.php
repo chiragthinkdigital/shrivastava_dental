@@ -2,7 +2,7 @@
     'lang' => 'en-IN',
     'bodyAttributes' => 'data-clone-lang="en" data-clone-page="index"',
     'pageClass' => 'page home-page',
-    'pageStyle' => ' style="timeline-scope:--tl-section-about, --tl-section-services, --tl-section-team, --tl-section-faq, --tl-section-contacts;"',
+    'pageStyle' => ' style="timeline-scope:--tl-section-about, --tl-section-services, --tl-section-team, --tl-section-faq, --tl-section-instagram, --tl-section-contacts;"',
 ])
 
 @section('head')

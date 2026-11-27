@@ -20,7 +20,7 @@
 <meta property="og:image" content="/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<script type="application/ld+json">{"{{ '@' }}context":"https://schema.org","@type":"Dentist","name":"Shrivastava Dental Clinic","url":"https://shrivastava-dental.com/","telephone":"+91 7796376170","email":"kritiacshrivastava92@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Shop No. Express Tower, Wadala Naka, near Hotel Saffron","addressLocality":"Nashik","postalCode":"422001","addressCountry":"IN"},"openingHours":["Mo 09:00-20:00","Tu-Fr 10:00-20:00"],"contactPoint":{"@type":"ContactPoint","telephone":"+91 7796376170","contactType":"customer service","availableLanguage":["lv","ru","en"]},"sameAs":["https://www.facebook.com/LAVAdentalstudio/","https://www.instagram.com/lavadentalstudio/"]}</script>
+<script type="application/ld+json">{"{{ '@' }}context":"https://schema.org","@type":"Dentist","name":"Shrivastava Dental Clinic","url":"https://shrivastava-dental.com/","telephone":"+91 7796376170","email":"kritiacshrivastava92@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Wadala Naka, Renuka Nagar","addressLocality":"Nashik","addressRegion":"Maharashtra","postalCode":"422001","addressCountry":"IN"},"openingHours":["Mo 09:00-20:00","Tu-Fr 10:00-20:00"],"contactPoint":{"@type":"ContactPoint","telephone":"+91 7796376170","contactType":"customer service","availableLanguage":["lv","ru","en"]},"sameAs":["https://www.facebook.com/LAVAdentalstudio/","https://www.instagram.com/lavadentalstudio/"]}</script>
 <!-- Meta Pixel Code -->
 
 <!-- End Meta Pixel Code -->

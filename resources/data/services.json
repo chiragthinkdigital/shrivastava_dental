@@ -105,7 +105,7 @@
         "key": "dental-implants",
         "title": "Dental Implants",
         "body": "<p>Long-lasting implant solutions that replace missing teeth and feel natural.</p>",
-        "page": "implants",
+        "page": null,
         "media": {
           "video": "/cms/api/media/file/service-temp/service-temp-dental-implants.mp4",
           "vcis": [
@@ -125,7 +125,7 @@
         "key": "orthodontics",
         "title": "Orthodontic Treatments (Braces)",
         "body": "<p>Straighten teeth with modern braces or aligners and improve your bite.</p>",
-        "page": "aligners",
+        "page": null,
         "media": {
           "video": "/cms/api/media/file/service-temp/service-temp-orthodontics.mp4",
           "vcis": [
@@ -225,7 +225,7 @@
         "key": "oral-medicine-and-diagnosis",
         "title": "Oral Medicine and Diagnosis",
         "body": "<p>Detailed examination, imaging and diagnosis to identify the cause of oral health problems.</p>",
-        "page": "complex-diagnostics",
+        "page": null,
         "media": {
           "video": "/cms/api/media/file/service-temp/service-temp-oral-medicine-and-diagnosis.mp4",
           "vcis": [
