@@ -229,6 +229,16 @@ dialog:has(.video-dialog__full--portrait) {
   }
 }
 
+@media screen and (width >= 960px) {
+  .about-manifest .image-info-box__item--main {
+    grid-column: 8 / span 5;
+  }
+
+  .about-manifest .image-info-box__item--main .scroll-box {
+    padding-left: var(--space-size-s);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   #team .image-carousel__image,
   #team .image-carousel__image--active,
@@ -315,26 +325,54 @@ dialog:has(.video-dialog__full--portrait) {
 
 .feedback-instagram-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - var(--space-size-s-m)) / 2);
   gap: var(--space-size-s-m);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  padding-bottom: var(--space-size-xs);
+}
+
+.feedback-instagram-list:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.feedback-instagram-list::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (width >= 480px) {
   .feedback-instagram-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-columns: calc((100% - var(--space-size-s-m) * 2) / 3);
+  }
+}
+
+@media screen and (width >= 1080px) {
+  .feedback-instagram-list {
+    grid-auto-columns: calc((100% - var(--space-size-s-m) * 3) / 4);
   }
 }
 
 .feedback-instagram-list__item {
   position: relative;
+  display: block;
   aspect-ratio: 3 / 4;
   align-self: stretch;
   max-width: 100%;
   overflow: clip;
+  color: var(--color-cream);
+  text-decoration: none;
   border: 1px solid var(--color-cream-transparent-20);
   border-radius: var(--space-size-2xs);
   background-color: var(--palette-wine);
   box-shadow: 0 10px 30px color-mix(in srgb, var(--palette-primary) 30%, transparent);
+}
+
+.feedback-instagram-list__item:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 .feedback-instagram-list__image {
@@ -344,8 +382,92 @@ dialog:has(.video-dialog__full--portrait) {
   object-fit: cover;
 }
 
-@media screen and (width < 720px) {
-  .overlay-section--about-experience {
+.feedback-instagram-list__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-size-xs);
+  background: color-mix(in srgb, var(--palette-primary) 72%, transparent);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.feedback-instagram-list__play,
+.feedback-instagram-list__action {
+  transform: translateY(8px);
+  transition: transform 200ms ease;
+}
+
+.feedback-instagram-list__play {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--palette-wine);
+  color: var(--color-cream);
+}
+
+.feedback-instagram-list__item:hover .feedback-instagram-list__overlay,
+.feedback-instagram-list__item:focus-visible .feedback-instagram-list__overlay {
+  opacity: 1;
+}
+
+.feedback-instagram-list__item:hover .feedback-instagram-list__play,
+.feedback-instagram-list__item:hover .feedback-instagram-list__action,
+.feedback-instagram-list__item:focus-visible .feedback-instagram-list__play,
+.feedback-instagram-list__item:focus-visible .feedback-instagram-list__action {
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .feedback-instagram-list__overlay {
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: var(--space-size-xs);
+    background: linear-gradient(to top, color-mix(in srgb, var(--palette-primary) 80%, transparent), transparent 55%);
+    opacity: 1;
+  }
+
+  .feedback-instagram-list__play {
     display: none;
+  }
+
+  .feedback-instagram-list__action,
+  .feedback-instagram-list__item:hover .feedback-instagram-list__action,
+  .feedback-instagram-list__item:focus-visible .feedback-instagram-list__action {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-instagram-list__overlay,
+  .feedback-instagram-list__play,
+  .feedback-instagram-list__action {
+    transition: none;
+  }
+}
+
+@supports (animation-timeline: scroll()) and (animation-range: 0% 100%) {
+  @media screen and (width < 720px) and (height >= 660px) {
+    .wheel-block-wheel {
+      isolation: isolate;
+    }
+
+    .wheel-block-wheel::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 70% -20% -40% -20%;
+      background-color: var(--color-primary);
+      pointer-events: none;
+    }
+
+    .wheel-block-wheel__item {
+      z-index: 2;
+    }
   }
 }

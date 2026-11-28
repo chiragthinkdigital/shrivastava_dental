@@ -697,6 +697,7 @@
 }
 .about-process-gallery-item-container {
   overflow:clip;
+  border-radius:var(--space-size-2xs);
 }
 @keyframes about-process-gallery-image-move {
   0% {

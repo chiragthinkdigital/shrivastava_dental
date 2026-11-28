@@ -428,6 +428,63 @@ import Lenis from 'lenis';
     });
   }
 
+  function initInstagramReelsScroller() {
+    var scroller = document.querySelector('.feedback-instagram-list');
+    if (!scroller) return;
+
+    var targetLeft = scroller.scrollLeft;
+    var animationFrame = null;
+    var reducedMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+
+    function maxScrollLeft() {
+      return Math.max(0, scroller.scrollWidth - scroller.clientWidth);
+    }
+
+    function animate() {
+      var distance = targetLeft - scroller.scrollLeft;
+      if (Math.abs(distance) < 0.5) {
+        scroller.scrollLeft = targetLeft;
+        animationFrame = null;
+        return;
+      }
+      scroller.scrollLeft += distance * 0.14;
+      animationFrame = window.requestAnimationFrame(animate);
+    }
+
+    function scrollHorizontally(delta) {
+      targetLeft = Math.max(0, Math.min(maxScrollLeft(), targetLeft + delta));
+      if (reducedMotion && reducedMotion.matches) {
+        if (animationFrame) window.cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+        scroller.scrollLeft = targetLeft;
+        return;
+      }
+      if (!animationFrame) animationFrame = window.requestAnimationFrame(animate);
+    }
+
+    scroller.addEventListener('wheel', function (e) {
+      if (e.ctrlKey || wheelSnapStuck) return;
+      var delta = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+      if (!delta) return;
+      if (e.deltaMode === 1) delta *= 16;
+      else if (e.deltaMode === 2) delta *= window.innerHeight;
+      delta = Math.max(-160, Math.min(160, delta * 1.2));
+      var max = maxScrollLeft();
+      if ((delta < 0 && targetLeft <= 0) || (delta > 0 && targetLeft >= max - 1)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      scrollHorizontally(delta);
+    }, { passive: false });
+
+    scroller.addEventListener('scroll', function () {
+      if (!animationFrame) targetLeft = scroller.scrollLeft;
+    }, { passive: true });
+
+    window.addEventListener('resize', function () {
+      targetLeft = Math.max(0, Math.min(scroller.scrollLeft, maxScrollLeft()));
+    });
+  }
+
   /* ---------- vci comparison sliders ---------- */
   function initCompareSliders() {
     var HANDLE_SIZE = 40;
@@ -1211,6 +1268,7 @@ import Lenis from 'lenis';
     renderServiceList();
     initServiceModal();
     initWheelBlocks();
+    initInstagramReelsScroller();
     initSnapStuckGuard();
     initHeader();
     initNavProgress();
